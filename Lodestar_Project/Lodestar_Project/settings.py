@@ -37,11 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-<<<<<<< HEAD
-    'members',
-    'front'
-=======
->>>>>>> parent of 4fe054b (memebrs not migrating to load html file)
+    'members'
 ]
 
 MIDDLEWARE = [
