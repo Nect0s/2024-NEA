@@ -5,7 +5,7 @@ CREATE TABLE `accounts` (
   `a_name` varchar(255),
   `gen` integer,
   `coun` integer,
-  `pass` varchar(255)
+  `passw` varchar(255)
 );
 
 CREATE TABLE `users` (
