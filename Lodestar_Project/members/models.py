@@ -15,22 +15,23 @@ class users(models.Model):
     username = models.CharField(max_length=255)
     uc_at = models.DateTimeField()
     u_desc = models.CharField(max_length=255)
+    #u_desc added
 
 class messages(models.Model):
     m_id = models.IntegerField()
     b_id = models.IntegerField()
     u_id = models.IntegerField()
-    status_id = models.IntegerField()
     mc_at = models.DateTimeField()
     c_id = models.IntegerField()
+    #removed status
 
 class servers(models.Model):
     se_id = models.IntegerField()
     sc_at = models.DateTimeField()
     s_name = models.CharField(max_length=255)
     s_desc = models.CharField(max_length=255)
-    s_image = models.CharField(max_length=255)
     owner_user_id = models.CharField(max_length=255)
+    #removed server_image
 
 
 class channels(models.Model):
@@ -39,12 +40,13 @@ class channels(models.Model):
     cc_at = models.DateTimeField()
     c_name = models.CharField(max_length=255)
     c_desc = models.CharField(max_length=255)
-    c_image = models.CharField(max_length=255)
+    #removed channel_image
 
 class message_content(models.Model):
     b_id = models.IntegerField()
     b_type = models.CharField(max_length=255)
     body = models.CharField(max_length=255)
+    #can be expanded upon with types
 
 class user_list(models.Model):
     ul_id = models.IntegerField()

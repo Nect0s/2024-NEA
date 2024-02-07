@@ -1,0 +1,58 @@
+Ref: accounts.a_id < users.u_id                                                     ONE TO MANY
+
+Ref: users.(u_id) - messages.(u_id) //foreign key                        FORIENG KEY
+
+Ref: messages.(b_id) - message_content.(b_id) //foreign key                   FOEIGN KEY
+
+Ref: messages.(c_id) - channels.(c_id) //foreign key                            FOREIGN KEY
+
+Ref: users.(u_id) - servers.(owner_user_id) // owner_verification               FOEIEGN KEY
+
+Ref: servers.se_id < channels.se_id                                 ONETO MANY
+
+Ref: "user_list"."u_id" < "users"."u_id"                               ONE TO MANY
+
+Ref: "servers"."se_id" - "user_list"."ul_id" //foreign key               FOREIGN KEY
+
+Ref: "permissions"."p_id" - "role_profile"."p_id" //foreign key          FOREIGN KEY
+
+Ref: "role"."rp_id" - "role_profile"."rp_id" //foreign key              FROEIGN KEY
+
+Ref: "message_content"."b_id" - "commands"."b_id"                     FOREIGN KEY
+
+Ref: "message_content"."b_id" - "media_collection"."b_id"             FOREIGN KEY
+
+Ref: "report_type"."rt_id" - "report"."rt_id"               FOEIGN KEY
+ 
+Ref: "users"."u_id" - "report"."u_id"                 FOREIGN KEY
+
+Ref: "user_list"."ul_id" < "role"."ul_id"             ONE TO MANY
+
+
+example code:
+
+from django.db import models
+
+class Author(models.Model):
+    name = models.CharField(max_length=100)
+
+class Review(models.Model):
+    book = models.ForeignKey('Book', on_delete=models.CASCADE)
+    reviewer_name = models.CharField(max_length=100)
+    content = models.TextField()
+
+class Book(models.Model):
+    title = models.CharField(max_length=200)
+    authors = models.ManyToManyField(Author)
+
+In this example:
+
+Each Book can have multiple Author instances associated with it through the authors many-to-many relationship.
+Each Book can have multiple Review instances associated with it through the Review model's foreign key field book.
+This setup allows you to have a single variable (authors) that establishes a many-to-many relationship with the Author model and a one-to-many relationship with the Review model.
+
+You can now access authors associated with a book using book_instance.authors.all() and reviews associated with a book using book_instance.review_set.all().
+
+
+
+
