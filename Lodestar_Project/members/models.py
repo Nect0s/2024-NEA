@@ -14,6 +14,7 @@ class users(models.Model):
     u_id = models.IntegerField()
     username = models.CharField(max_length=255)
     uc_at = models.DateTimeField()
+    u_desc = models.CharField(max_length=255)
 
 class messages(models.Model):
     m_id = models.IntegerField()
