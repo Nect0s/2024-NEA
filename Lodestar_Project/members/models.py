@@ -5,10 +5,10 @@ class users(models.Model):
     u_id = models.IntegerField(primary_key=True)
     uc_at = models.DateTimeField()
     email = models.CharField(max_length=255)
-    u_name = models.CharField(max_length=255)
+    username = models.CharField(max_length=255)
     gen = models.IntegerField()
     country = models.IntegerField()
-    passw = models.CharField(max_length=100)
+    password = models.CharField(max_length=100)
 
 class accounts(models.Model):
     a_id = models.ForeignKey(users, to_field='u_id', primary_key=True, on_delete=models.CASCADE)
