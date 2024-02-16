@@ -13,15 +13,35 @@
     <div style="display: grid; place-items: center;">
       <img src="LOGO.jpg" alt="LOGO" width="300" class="center">
       <p style="color: red; font-size: 25px;">LOGIN</p>
-      <button style="width: 300px; height:50px;"onclick="location.href = 'load.html';">TO LOAD (TO REMOVE)</button>
-      <p style=></p>
-      <button style="width: 300px; height:50px;"onclick="location.href = 'members.html';">return to MEMBERS</button>
-	    <p style=></p>
-      <p style="color: red;">USERNAME</p> 
-      <input type="a_name" id="a_name" name="a_name"><br><br>
-      <p style="color: red;">PASSWORD</p>
-	    <input type="password" id="password" name="password"><br><br>
-	    <input type="submit" value="Submit">
+      <!--<button style="width: 300px; height:50px;"onclick="location.href = 'load.html';">TO LOAD (TO REMOVE)</button>-->
+      <!-- UNCOMMENTING THIS GIVES ACCESS TO THE LOAD PAGE WITHOUT SUBMITTING INFO-->
+      <form action="action_page.php" method="POST">
+
+        <div>
+        <label for='u_name'> Username </label>
+        <input type="text" id="u_name" name="u_name"  required>
+        </div>
+
+        <br>
+
+        <div>
+        <label for='passw'> Password </label>
+        <input type="password" id="passw" name="passw"  min="10" max="20" required>
+        </div>
+
+        <br>
+
+        <div>
+          <input type="reset">
+        
+          <input type="submit">
+        </div>
+
+        <br>
+
+      </form>
+      <button style="width: 300px; height:50px;"onclick="location.href = 'members.html';">return</button>
+      <!-- RETURNS TO MEMBERS.html or front page-->
     </div>
   </div>
 </body>
