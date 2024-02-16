@@ -8,6 +8,6 @@ def members(request):
   template = loader.get_template('members.html')
   return HttpResponse(template.render())
 
-def create(request):
-  form = create_user_form()
-  return render(request, 'create.html', {'form' : form})
+#def create(request):
+  #form = create_user_form()
+  #return render(request, 'create.html', {'form' : form})

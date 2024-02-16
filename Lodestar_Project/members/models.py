@@ -4,11 +4,12 @@ from django.db import models
 class users(models.Model):
     u_id = models.IntegerField(primary_key=True)
     uc_at = models.DateTimeField()
-    email = models.CharField(max_length=255)
-    username = models.CharField(max_length=255)
-    gen = models.CharField(max_length=255)
-    country = models.CharField(max_length=255)
-    password = models.CharField(max_length=100)
+    email = models.CharField(max_length=255) #verification / news / updates
+    u_name = models.CharField(max_length=255)
+    sex = models.CharField(max_length=255) 
+    Continent = models.CharField(max_length=255) #for concept of connecting to optimal server
+    passw = models.CharField(max_length=100)
+    p_number = models.IntegerField(max_length=100) #strong 2-factor verification method
 
     def __str__(self):
         return self.name
@@ -18,6 +19,7 @@ class accounts(models.Model):
     username = models.CharField(max_length=255)
     ac_at = models.DateTimeField()
     a_desc = models.CharField(max_length=255)
+    pron = models.CharField(max_length=255)#common feature is pronoun tags on websites
     #a_desc added
 
 class servers(models.Model):

@@ -13,8 +13,15 @@ from members.models import users
         #fields = ['username']
         #fields = ['username', 'password', 'email', 'gen', 'country']
 
-class create_user_form(forms.Form):
-    username = forms.CharField(label="Enter first name",max_length=50)
-    
+#class create_user_form(forms.Form):
+    #username = forms.CharField(label="Enter first name",max_length=50)
 
-form = create_user_form()
+
+#form = create_user_form()
+
+#html for form:
+      #<form method="POST" class="post-form">  
+        #{% csrf_token %}  
+        #{{ form.as_p }}  
+        #<button type="submit" class="save btn btn-default">Save</button>  
+      #</form>  

@@ -12,12 +12,69 @@
 <body style="background-color:#333333;">
     <div style="display: grid; place-items: center;">
       <img src="LOGO.jpg" alt="LOGO" width="300" class="center">
-      <form method="POST" class="post-form">  
-        {% csrf_token %}  
-        {{ form.as_p }}  
-        <button type="submit" class="save btn btn-default">Save</button>  
-      </form>  
+      <p style=></p>
+      <form action="action_page.php" method="POST">
 
+        <div>
+        <label for='u_name'> Username </label>
+        <input type="text" id="u_name" name="u_name" placeholder="a private username" required>
+        </div>
+
+        <br>
+
+        <div>
+        <label for='email'> Email </label>
+        <input type="email" id="email" name="email" placeholder="example@etc.com" required>
+        </div>
+
+        <br>
+
+        <div>
+        <label for='passw'> Password </label>
+        <input type="password" id="passw" name="passw" placeholder="10-20 characters" required>
+        </div>
+
+        <br>
+
+        <div>
+          <label for="sex">Sex:</label>
+
+          <label for="male">Male</label>
+          <input type="radio" id="male" name="male" value="male">
+
+          <label for="female">Female</label>
+          <input type="radio" id="female" name="female" value="female">
+
+          <label for="PhD.">Prefer not to say</label>
+          <input type="radio" id="PhD." name="title" value="PhD.">
+      </div>
+
+        <br>
+
+        <div>
+         <label for="Continent">Continent:</label>
+          <select id="payment" name="payment">
+            <option value="EU">Europe</option>
+            <option value="AS">Asia</option>
+            <option value="NA">North America</option>
+            <option value="SA">South America</option>
+            <option value="AF">Africa</option>
+            <option value="OC">Oceania</option>
+         </select>
+        </div>
+
+
+        <br>
+
+        <div>
+          <input type="reset">
+        
+          <input type="submit">
+        </div>
+
+      </form>
+
+      <p style=></p>
       <p style="color: red;">BY CLICKING "SUBMIT" YOU AGREE TO THE FOLLOWING T&C'S</p>
       <button onclick="location.href = 'terms.html';">T&C's</button>
       <p style=></p>
