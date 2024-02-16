@@ -10,6 +10,9 @@ class users(models.Model):
     country = models.CharField(max_length=255)
     password = models.CharField(max_length=100)
 
+    def __str__(self):
+        return self.name
+
 class accounts(models.Model):
     a_id = models.ForeignKey(users, to_field='u_id', primary_key=True, on_delete=models.CASCADE)
     username = models.CharField(max_length=255)

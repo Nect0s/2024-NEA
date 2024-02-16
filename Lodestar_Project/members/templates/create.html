@@ -12,8 +12,10 @@
 <body style="background-color:#333333;">
     <div style="display: grid; place-items: center;">
       <img src="LOGO.jpg" alt="LOGO" width="300" class="center">
-      {{form}}
-      
+      <form method="post">
+        {% csrf_token %}
+        {{ form }}
+      </form>
       <p style="color: red;">BY CLICKING "SUBMIT" YOU AGREE TO THE FOLLOWING T&C'S</p>
       <button onclick="location.href = 'terms.html';">T&C's</button>
       <p style=></p>
