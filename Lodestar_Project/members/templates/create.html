@@ -8,16 +8,19 @@
       text-align: center;
     }
   </style>
+  <!-- centres all objects in body -->
 </head>
 <body style="background-color:#333333;">
     <div style="display: grid; place-items: center;">
       <img src="LOGO.jpg" alt="LOGO" width="300" class="center">
       <br>
       <form action="action_page.php" method="POST">
+        <!-- POST method privatley updates values while GET method will store in url and show it, POST is more secure  -->
 
         <div>
         <label for='u_name'> Username </label>
         <input type="text" id="u_name" name="u_name" placeholder="a private username" required>
+        <!-- private username makes it less likely to be guessed if their other accounts are broken into, because it wont be guessable if its not significant to them -->
         </div>
 
         <br>
@@ -25,13 +28,15 @@
         <div>
         <label for='email'> Email </label>
         <input type="email" id="email" name="email" placeholder="example@etc.com" required>
+        <!-- type requires an @, this will suffice before email verification via sending a request email or using an API to check if its real -->
         </div>
 
         <br>
 
         <div>
         <label for='passw'> Password </label>
-        <input type="password" id="passw" name="passw" placeholder="10-20 characters"  min="10" max="20" required>
+        <input type="password" id="passw" name="passw" placeholder="10-25 characters"  min="10" max="25" required>
+        <!-- min char count prevents easy passwords, max count prevents forgetting passwords -->
         </div>
 
         <br>
@@ -60,6 +65,7 @@
             <option value="SA">South America</option>
             <option value="AF">Africa</option>
             <option value="OC">Oceania</option>
+            <!-- allows for easier connection to an optimal server before location / server browser would be implemented -->
          </select>
         </div>
 
@@ -69,12 +75,14 @@
         <div>
           <label for="phone">Phone #</label>
           <input type="tel" id="phone" name="phone" placeholder="01234 567890">
+          <!-- optimal for 2-factor verification -->
         </div>
 
         <br>
 
         <div>
           <input type="reset">
+          <!-- easier than repeatedly hitting backspace -->
         
           <input type="submit">
         </div>
