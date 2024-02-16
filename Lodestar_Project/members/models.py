@@ -85,18 +85,17 @@ class media_collection(models.Model):
     m_id = models.IntegerField(primary_key=True)
     b_id =  models.OneToOneField(message_content, to_field='b_id', on_delete=models.CASCADE)
 
-class report_type(models.Model):
-    rt_id = models.IntegerField(primary_key=True)
+
+class report(models.Model):
+    r_id = models.IntegerField(primary_key=True)
+    a_id = models.OneToOneField(accounts, to_field='a_id', on_delete=models.CASCADE)
+    r_title = models.CharField(max_length=255)
     is_med = models.BooleanField()
     is_msg = models.BooleanField()
     is_usr = models.BooleanField()
     is_srv = models.BooleanField()
     is_chl = models.BooleanField()
-    is_oth = models.CharField(max_length=255)
-    
-class report(models.Model):
-    r_id = models.IntegerField(primary_key=True)
-    a_id = models.OneToOneField(accounts, to_field='a_id', on_delete=models.CASCADE)
-    rt_id = models.OneToOneField(report_type, to_field='rt_id', on_delete=models.CASCADE)
+    is_oth = models.BooleanField()
+    r_desc = models.CharField(max_length=255)
 
 

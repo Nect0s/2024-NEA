@@ -31,7 +31,7 @@
 
         <div>
         <label for='passw'> Password </label>
-        <input type="password" id="passw" name="passw" placeholder="10-20 characters" required>
+        <input type="password" id="passw" name="passw" placeholder="10-20 characters"  min="10" max="20" required>
         </div>
 
         <br>
@@ -40,13 +40,13 @@
           <label for="sex">Sex:</label>
 
           <label for="male">Male</label>
-          <input type="radio" id="male" name="male" value="male">
+          <input type="radio" id="male" name="sex" value="male">
 
           <label for="female">Female</label>
-          <input type="radio" id="female" name="female" value="female">
+          <input type="radio" id="female" name="sex" value="female">
 
-          <label for="PhD.">Prefer not to say</label>
-          <input type="radio" id="PhD." name="title" value="PhD.">
+          <label for="N">Prefer not to say</label>
+          <input type="radio" id="N" name="sex" value="N">
       </div>
 
         <br>
@@ -63,6 +63,13 @@
          </select>
         </div>
 
+
+        <br>
+
+        <div>
+          <label for="phone">Phone #</label>
+          <input type="tel" id="phone" name="phone" placeholder="01234 567890">
+        </div>
 
         <br>
 

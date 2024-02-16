@@ -13,6 +13,47 @@
     <div style="display: grid; place-items: center;">
       <img src="LOGO.jpg" alt="LOGO" width="300" class="center">
       <p style="color: red;">REPORTING</p>
+      <form action="action_page.php" method="POST">
+
+        <div>
+          <label for='report_desc'> Report Title </label>
+          <input type="text" id="report_desc" name="report_desc" placeholder="Focus of report" required>
+          </div>
+        <br>
+
+        <div>
+          <input type="checkbox" id="med" name="med" value="med">
+          <label for="med"> Reporting Media</label><br>
+          <input type="checkbox" id="msg" name="msg" value="msg">
+          <label for="msg"> Reporting Message</label><br>
+          <input type="checkbox" id="usr" name="usr" value="usr">
+          <label for="usr"> Reporting User</label><br>
+          <input type="checkbox" id="srv" name="srv" value="srv">
+          <label for="srv"> Reporting Server</label><br>
+          <input type="checkbox" id="chl" name="chl" value="chl">
+          <label for="chl"> Reporting Channel</label><br>
+          <input type="checkbox" id="oth" name="oth" value="oth">
+          <label for="oth"> Reporting Other</label><br>
+        </div>
+
+        <br>
+
+        <div>
+        <label for='report_desc'> Report Description </label>
+        <input type="text" id="report_desc" name="report_desc" placeholder="enter any extra details" required>
+        </div>
+
+        <br>
+
+        <div>
+          <input type="reset">
+        
+          <input type="submit">
+        </div>
+
+        <br>
+
+      </form>
       <button style="width: 300px; height:50px;" onclick="location.href = 'main.html';">return to MAIN</button>
     </div>
   </div>
