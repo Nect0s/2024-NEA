@@ -3,7 +3,7 @@ from django import forms
 from .models import users
 
 class create_user_form(ModelForm):
-    username = forms.TextInput()
+    #username = forms.TextInput()
     #password = forms.TextInput()
     #email = forms.TextInput()
     #gender = forms.TextInput()

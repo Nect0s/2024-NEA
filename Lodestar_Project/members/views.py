@@ -10,4 +10,4 @@ def members(request):
 
 def create_user(request):
   form = create_user_form(request.POST)
-  render(request, 'members/create.html', {'form' : form})
+  return render(request, 'templates\create.html', {'form' : form})
