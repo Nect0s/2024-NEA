@@ -6,8 +6,8 @@ class users(models.Model):
     uc_at = models.DateTimeField()
     email = models.CharField(max_length=255)
     username = models.CharField(max_length=255)
-    gen = models.IntegerField()
-    country = models.IntegerField()
+    gen = models.CharField(max_length=255)
+    country = models.CharField(max_length=255)
     password = models.CharField(max_length=100)
 
 class accounts(models.Model):

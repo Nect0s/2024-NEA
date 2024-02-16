@@ -1,19 +1,14 @@
-# In forms.py
-from django import forms
-from django.contrib.auth.models import users
 from django.forms import ModelForm
+from django import forms
+from .models import users
 
-class CreateUserForm(ModelForm):
+class create_user_form(ModelForm):
+    username = forms.TextInput()
+    #password = forms.TextInput()
+    #email = forms.TextInput()
+    #gender = forms.TextInput()
+    #country = forms.TextInput()
     class Meta:
         model = users
-        fields = ['username', 'password', 'email', 'gen', 'country']
-
-    def clean(self):
-        cleaned_data = super().clean()
-        username = cleaned_data.get("Username")
-        password = cleaned_data.get("Password")
-        email = cleaned_data.get("Email")
-        gender = cleaned_data.get("Gender")
-        country = cleaned_data.get("Country")
-
-        # Add your custom validation checks here
+        fields = ['username']
+        #fields = ['username', 'password', 'email', 'gen', 'country']
