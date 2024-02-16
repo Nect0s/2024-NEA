@@ -1,6 +1,6 @@
 from django.forms import ModelForm
 from django import forms
-from .models import users
+from members.models import users
 
 class create_user_form(ModelForm):
     #username = forms.TextInput()
@@ -12,3 +12,5 @@ class create_user_form(ModelForm):
         model = users
         fields = ['username']
         #fields = ['username', 'password', 'email', 'gen', 'country']
+
+form = create_user_form()
