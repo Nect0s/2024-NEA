@@ -1,3 +1,5 @@
+list of key relationships of an earlier database to design the model
+
 Ref: accounts.a_id < users.u_id                                       ONE TO MANY    DONE
 
 Ref: users.(u_id) - messages.(u_id) //foreign key                     ONE TO ONE     DONE

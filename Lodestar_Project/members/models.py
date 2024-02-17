@@ -1,5 +1,6 @@
 from django.db import models
-
+#a model is the django equivalent of a database, and has to be written in
+#might be able to write it into the MySQL database, but not necessary, this is a heavily edited version of it after it was ported
 # Create your models here.
 class users(models.Model):
     u_id = models.IntegerField(primary_key=True)

@@ -1,3 +1,5 @@
+
+
 CREATE TABLE `accounts` (
   `a_id` integer PRIMARY KEY,
   `ac_at` timestamp,

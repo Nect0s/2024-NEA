@@ -2,6 +2,8 @@ from django.forms import ModelForm
 from django import forms
 from members.models import users
 
+#this page would hold all forms to directly connect to the database itself, but it never funmctioned correctly, below would've been the code for a create_user form
+
 #class create_user_form(ModelForm):
     #username = forms.TextInput()
     #password = forms.TextInput()

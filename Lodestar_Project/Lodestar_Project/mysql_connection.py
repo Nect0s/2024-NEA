@@ -10,6 +10,9 @@ mydb = mysql.connector.connect(
 
 print(mydb)
 
+#not sure if file is relevant anymore as database had to be converted to SQL
+
+
 #import pymysql
 
 #conn = pymysql.connect(
