@@ -1,6 +1,6 @@
 #this is where i am writing in pre determined stuff to database
 
-from members.models import role_profile, permissions
+from .models import role_profile, permissions
 
 #roles + permissions
 #Their will be 4 tiers of permissions (can do all and below) 
