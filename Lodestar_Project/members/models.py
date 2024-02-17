@@ -74,7 +74,7 @@ class permissions(models.Model):
 class role_profile(models.Model):
     rp_id = models.OneToOneField(role, to_field='rp_id', primary_key=True, on_delete=models.CASCADE)
     r_name = models.CharField(max_length=255)
-    r_col = models.CharField(max_length=255)
+    r_col = models.CharField(max_length=6) #written as hex codes
     r_desc = models.CharField(max_length=255)
     p_id = models.OneToOneField(permissions, to_field='p_id', on_delete=models.CASCADE)
 
