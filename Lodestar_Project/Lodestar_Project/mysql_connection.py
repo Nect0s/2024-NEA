@@ -10,7 +10,7 @@ mydb = mysql.connector.connect(
 
 print(mydb)
 
-#not sure if file is relevant anymore as database had to be converted to SQL
+#not sure if file is relevant anymore as database had to be converted to a Django Model
 
 
 #import pymysql

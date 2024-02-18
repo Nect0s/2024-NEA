@@ -1,4 +1,4 @@
-
+/* this is and older version of the database, before it was converted to model and edited */
 
 CREATE TABLE `accounts` (
   `a_id` integer PRIMARY KEY,
